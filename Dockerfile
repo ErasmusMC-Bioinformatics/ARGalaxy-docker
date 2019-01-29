@@ -2,7 +2,9 @@ FROM bgruening/galaxy-stable:18.09
 
 ENV GALAXY_CONFIG_BRAND "ARGalaxy"
 ENV GALAXY_CONFIG_CONDA_ENSURE_CHANNELS "iuc,conda-forge,bioconda,imperial-college-research-computing,defaults"
-ENV GALAXY_CONFIG_SANITIZE_ALL_HTML "false"
+ENV GALAXY_CONFIG_SANITIZE_ALL_HTML "False"
+ENV GALAXY_CONFIG_CONDA_AUTO_INSTALL "True"
+ENV GALAXY_CONFIG_CONDA_AUTO_INIT "True"
 
 WORKDIR /galaxy-central
 
