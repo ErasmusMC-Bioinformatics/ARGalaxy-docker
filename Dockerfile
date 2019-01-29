@@ -16,6 +16,6 @@ VOLUME ["/export/", "/data/", "/var/lib/docker"]
 
 EXPOSE :80
 EXPOSE :21
-EXPOSE 8080
+EXPOSE :8080
 
 CMD ["/usr/bin/startup"]
