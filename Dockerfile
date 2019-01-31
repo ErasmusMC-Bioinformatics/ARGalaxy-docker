@@ -1,7 +1,7 @@
 FROM bgruening/galaxy-stable:18.09
 
 RUN apt update
-RUN apt install bc
+RUN apt install -y bc
 
 ENV GALAXY_CONFIG_BRAND "ARGalaxy"
 ENV GALAXY_CONFIG_CONDA_ENSURE_CHANNELS "iuc,conda-forge,bioconda,imperial-college-research-computing,defaults"
