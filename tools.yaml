@@ -10,6 +10,6 @@ tools:
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: shm_csr
   owner: davidvanzessen
-  revision: 2649a821162d
+  revision: 825c07055d73
   tool_panel_section_label: ARGalaxy
   tool_shed_url: https://toolshed.g2.bx.psu.edu
