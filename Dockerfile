@@ -28,6 +28,10 @@ ADD tools.yaml $GALAXY_ROOT/tools.yaml
 
 RUN install-tools $GALAXY_ROOT/tools.yaml
 
+ADD welcome.html $GALAXY_CONFIG_DIR/web/welcome.html
+ADD welcome_image001.jpg $GALAXY_CONFIG_DIR/web/welcome_image001.jpg
+ADD welcome_image002.png $GALAXY_CONFIG_DIR/web/welcome_image002.png
+
 VOLUME ["/export/", "/data/", "/var/lib/docker"]
 
 EXPOSE :80
