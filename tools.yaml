@@ -5,11 +5,11 @@ install_resolver_dependencies: True
 tools:
 - name: argalaxy_tools
   owner: davidvanzessen
-  revision: 4d2a8f98a502
+  revision: e35b82f31ec7
   tool_panel_section_label: ARGalaxy
   tool_shed_url: https://toolshed.g2.bx.psu.edu
 - name: shm_csr
   owner: davidvanzessen
-  revision: 825c07055d73
+  revision: 58d2377b507d
   tool_panel_section_label: ARGalaxy
   tool_shed_url: https://toolshed.g2.bx.psu.edu
