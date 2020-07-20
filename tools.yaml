@@ -13,3 +13,13 @@ tools:
   revision: 58d2377b507d
   tool_panel_section_label: ARGalaxy
   tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: demultiplex_emc
+  owner: davidvanzessen
+  revision: 146bbd9d58f6
+  tool_panel_section_label: Preprocessing
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
+- name: cutadapt
+  owner: lparsons
+  revision: e4691e1589d3
+  tool_panel_section_label: Preprocessing
+  tool_shed_url: https://toolshed.g2.bx.psu.edu
