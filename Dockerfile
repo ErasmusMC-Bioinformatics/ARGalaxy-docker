@@ -1,4 +1,7 @@
-FROM bgruening/galaxy-stable:18.09
+#FROM bgruening/galaxy-stable:18.09
+FROM bgruening/galaxy-stable:20.05
+
+RUN rm /etc/apt/sources.list.d/*
 
 RUN apt update
 RUN apt install -y bc
@@ -6,10 +9,11 @@ RUN apt install -y bc
 # For changeo/python3
 ADD https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh miniconda3.sh
 RUN bash miniconda3.sh -b -p ~/miniconda3
-RUN ln -s -f ~/miniconda3/bin/python3 /usr/bin/python3
 
 # fix lsb_release
-RUN sed -i 's%/usr/bin/python3%/usr/bin/python2.7%g' /usr/bin/lsb_release
+#run ls -l /usr/bin/python2.7
+#RUN sed -i 's%/usr/bin/python3%/usr/bin/python2.7%g' /usr/bin/lsb_release
+#RUN lsb_release -a
 
 RUN ~/miniconda3/bin/pip install numpy scipy matplotlib ipython jupyter pandas sympy nose biopython presto changeo
 ADD https://bitbucket.org/kleinstein/changeo/downloads/changeo-0.4.4.tar.gz changeo-0.4.4.tar.gz
@@ -31,6 +35,8 @@ RUN install-tools $GALAXY_ROOT/tools.yaml
 ADD welcome.html $GALAXY_CONFIG_DIR/web/welcome.html
 ADD welcome_image001.jpg $GALAXY_CONFIG_DIR/web/welcome_image001.jpg
 ADD welcome_image002.png $GALAXY_CONFIG_DIR/web/welcome_image002.png
+
+RUN ln -s -f ~/miniconda3/bin/python3 /usr/bin/python3
 
 VOLUME ["/export/", "/data/", "/var/lib/docker"]
 
