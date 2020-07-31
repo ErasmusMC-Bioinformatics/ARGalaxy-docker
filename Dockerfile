@@ -4,7 +4,7 @@ FROM bgruening/galaxy-stable:20.05
 RUN rm /etc/apt/sources.list.d/*
 
 RUN apt update
-RUN apt install -y bc
+RUN apt install -y bc file
 
 # For changeo/python3
 ADD https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh miniconda3.sh
